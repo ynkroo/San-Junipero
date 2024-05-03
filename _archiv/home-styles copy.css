@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "Speltale";
+  src: url("assets/SpeltaleFont-Demo-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.hero-home {
+  position: relative;
+  background-color: #101010;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-image: url("assets/GradientBackground.png");
+  background-size: cover; /* Ensures the background covers the entire element */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.BackgroundGridHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.GridHome {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+p {
+  font-family: "PP Neue Montreal", sans-serif;
+  color: #f05aa1;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  position: absolute;
+  margin-left: 40px;
+  z-index: 3;
+  text-align: left;
+}
+
+h1 {
+  top: 85%;
+  color: #f05aa1;
+  font-family: Speltale;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 80px;
+  letter-spacing: 0.05rem;
+  margin-left: 40px;
+  position: absolute;
+  text-align: left;
+  z-index: 3;
+}
+
+.Credits {
+  top: 40px;
+}
+
+.Info {
+  bottom: 40px;
+}
+
+.ExperiencerDisksHome {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.CircleHome {
+  display: inline-block;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Orbit*/
+
+.wrap {
+  margin: 0 auto;
+  line-height: 6rem;
+  text-align: center;
+}
+
+.loader {
+  position: absolute;
+  margin: 0 auto 3rem auto;
+  overflow: hidden;
+}
+
+.loader > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.dot {
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/*  */
+/*  */
+/* ORBIT */
+
+.orbit {
+  height: 21rem;
+  width: 21rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: visible;
+  border-radius: 50%;
+}
+
+.orbit > div {
+  top: 2.5rem;
+  left: 2.5rem;
+  font-size: 1rem;
+  height: 15rem;
+  width: 15rem;
+  transform-origin: center center;
+}
+
+.orbit > div::before {
+  position: absolute;
+  left: calc(50% - 0.5em);
+  display: block;
+  content: "";
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+.orbit > div:nth-child(1)::before {
+  background-color: #f05aa1;
+}
+.orbit > div:nth-child(2)::before {
+  background-color: #f05aa1;
+}
+
+.orbit > div:nth-child(3)::before {
+  background-color: #f05aa1;
+}
+
+.orbit > div:nth-child(4)::before {
+  background-color: #f05aa1;
+}
+
+.go .loader.orbit > div {
+  animation: loading-orbit 6s infinite linear;
+}
+
+.go .loader.orbit > div::before {
+  animation: loading-orbit-before 2s infinite ease-in-out;
+}
+
+.loader.orbit > div:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader.orbit > div:nth-child(2) {
+  animation-delay: -0.75s;
+}
+.loader.orbit > div:nth-child(3) {
+  animation-delay: -1.5s;
+}
+.loader.orbit > div:nth-child(4) {
+  animation-delay: -2.25s;
+}
+
+.loader.orbit > div:nth-child(1)::before {
+  animation-delay: 0s;
+}
+.loader.orbit > div:nth-child(2)::before {
+  animation-delay: -0.5s;
+}
+.loader.orbit > div:nth-child(3)::before {
+  animation-delay: -1s;
+}
+.loader.orbit > div:nth-child(4)::before {
+  animation-delay: -1.5s;
+}
+
+@keyframes loading-orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-orbit-before {
+  0% {
+    height: 1em;
+    width: 1em;
+    transform: translate3d(0, 0, 0);
+    z-index: 5;
+  }
+  5% {
+    height: 1.25em;
+    width: 1.25em;
+  }
+  25% {
+    height: 2em;
+    width: 2em;
+    z-index: 10;
+  }
+  50% {
+    transform: translate3d(1rem, 15rem, 0);
+    z-index: 0;
+    height: 1em;
+    width: 1em;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    z-index: 0;
+    height: 1em;
+    width: 1em;
+  }
+}

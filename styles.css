@@ -15,7 +15,7 @@
 
 .hero-loading {
   position: relative;
-  background-color: #f0f0f0;
+  background-color: #d8d7d7;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -35,7 +35,7 @@
 .Grid {
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .ExperiencerDisks {
@@ -73,14 +73,14 @@
 }
 
 .filter-drop-shadow {
-  filter: drop-shadow(30px 30px 40px rgba(91, 93, 101, 0.2))
-    drop-shadow(-31px -31px 40px rgba(255, 255, 255, 0.9))
-    drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.9));
+  filter: drop-shadow(30px 30px 40px rgba(101, 91, 96, 0.3))
+    drop-shadow(-31px -31px 40px rgba(255, 255, 255, 0.6))
+    drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.6));
 }
 
 p {
   font-family: "PP Neue Montreal", sans-serif;
-  color: #f05aa1;
+  color: #1b1c1e;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.01rem;
@@ -91,8 +91,8 @@ p {
 }
 
 h1 {
-  top: 44%;
-  color: #f05aa1;
+  top: 43%;
+  color: #1b1c1e;
   font-family: Speltale;
   font-size: 48px;
   font-weight: 500;
