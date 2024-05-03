@@ -41,38 +41,69 @@
   opacity: 0.2;
 }
 
+.HeroImage {
+  border-radius: 32px; /* Rounded corners */
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.HeroImage img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+
 p {
   font-family: "PP Neue Montreal", sans-serif;
   color: #f05aa1;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 0.01rem;
   position: absolute;
-  margin-left: 40px;
-  z-index: 3;
-  text-align: left;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
 }
 
 h1 {
-  top: 85%;
   color: #f05aa1;
   font-family: Speltale;
-  font-size: 80px;
+  font-size: 150px;
   font-weight: 500;
-  line-height: 80px;
+  line-height: 150px;
   letter-spacing: 0.05rem;
-  margin-left: 40px;
   position: absolute;
-  text-align: left;
-  z-index: 3;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
 }
 
 .Credits {
-  top: 40px;
+  position: absolute;
+  top: 5vh;
 }
 
 .Info {
-  bottom: 40px;
+  position: absolute;
+  top: 95vh;
+}
+
+.Episode {
+  position: absolute;
+  margin-left: 480px;
+  top: 52vh;
 }
 
 .ExperiencerDisksHome {
