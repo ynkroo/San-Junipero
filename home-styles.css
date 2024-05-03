@@ -112,7 +112,21 @@ h1 {
   height: 100%;
   width: 100%;
 }
+.dot {
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
 
+/*  */
+/*  */
 /* ORBIT */
 
 .orbit {
