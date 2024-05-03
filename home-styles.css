@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Speltale";
+  src: url("assets/SpeltaleFont-Demo-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.hero-home {
+  position: relative;
+  background-color: #101010;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-image: url("assets/GradientBackground.png");
+  background-size: cover; /* Ensures the background covers the entire element */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+.BackgroundGridHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.GridHome {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+p {
+  font-family: "PP Neue Montreal", sans-serif;
+  color: #f05aa1;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  position: absolute;
+  margin-left: 40px;
+  z-index: 3;
+  text-align: left;
+}
+
+h1 {
+  top: 85%;
+  color: #f05aa1;
+  font-family: Speltale;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 80px;
+  letter-spacing: 0.05rem;
+  margin-left: 40px;
+  position: absolute;
+  text-align: left;
+  z-index: 3;
+}
+
+.Credits {
+  top: 40px;
+}
+
+.Info {
+  bottom: 40px;
+}
+
+.ExperiencerDisksHome {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.4);
+}
+
+.CircleHome {
+  display: inline-block;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.6s ease-in-out;
+}
