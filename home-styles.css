@@ -50,6 +50,8 @@
   align-items: center;
   overflow: hidden;
   z-index: 0;
+  filter: drop-shadow(30px 30px 100px rgb(25, 5, 71));
+  opacity: 0.3;
 }
 
 .HeroImage img {
@@ -112,7 +114,7 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.4);
+  transform: translate(-50%, -50%) scale(2.5);
 }
 
 .CircleHome {
@@ -122,6 +124,18 @@ h1 {
   transition: transform 0.6s ease-in-out;
 }
 
+.dot {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
 /* Orbit*/
 
 .wrap {
@@ -143,22 +157,6 @@ h1 {
   height: 100%;
   width: 100%;
 }
-.dot {
-  height: 190px;
-  width: 190px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
-  z-index: -1;
-}
-
-/*  */
-/*  */
-/* ORBIT */
 
 .orbit {
   height: 21rem;
