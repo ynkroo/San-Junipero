@@ -124,7 +124,7 @@ h1 {
   transition: transform 0.6s ease-in-out;
 }
 
-.dot {
+/* .dot {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -135,7 +135,33 @@ h1 {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   z-index: -1;
+} */
+
+.GlassCircle {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  box-shadow: 0 8px 32px 0 rgba(32, 26, 35, 0.4),
+    inset -20px -10px 100px rgba(27, 2, 78, 0.3),
+    inset 5px 10px 10px rgba(255, 255, 255, 0.9),
+    inset -20px -5px 10px rgba(67, 67, 67, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
+
 /* Orbit*/
 
 .wrap {
@@ -192,17 +218,21 @@ h1 {
 
 .orbit > div:nth-child(1)::before {
   background-color: #f05aa1;
+  mix-blend-mode: screen;
 }
 .orbit > div:nth-child(2)::before {
-  background-color: #f05aa1;
+  background-color: #a25af0;
+  mix-blend-mode: screen;
 }
 
 .orbit > div:nth-child(3)::before {
-  background-color: #f05aa1;
+  background-color: #5aa5f0;
+  mix-blend-mode: screen;
 }
 
 .orbit > div:nth-child(4)::before {
-  background-color: #f05aa1;
+  background-color: #f05a89;
+  mix-blend-mode: screen;
 }
 
 .go .loader.orbit > div {
