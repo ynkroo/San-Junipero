@@ -47,20 +47,14 @@
 .ExperiencerDisks {
   z-index: 1;
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.4);
-}
-
-.circle-base {
-  fill: #f0f0f0;
-  stroke: #ffffff;
-  stroke-width: 0.5px;
-  cursor: pointer;
-  transition: transform 1s ease-in-out;
-  transform-origin: center;
-  animation: pulsate 10s ease-in-out infinite;
+  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  border-radius: 50%;
+  box-shadow: 0px 8px 10px 0px #1f213652, inset 0px 4px 1px 1px white,
+    inset 0px -3px 10px 1px rgba(204, 198, 197, 0.5);
+  float: left;
+  height: 300px;
+  position: relative;
+  width: 300px;
 }
 
 @keyframes pulsate {
@@ -71,17 +65,6 @@
   50% {
     transform: scale(1.1);
   }
-}
-
-.circle-base:hover {
-  transform: scale(1.05);
-  animation-play-state: paused;
-}
-
-.filter-drop-shadow {
-  filter: drop-shadow(30px 30px 40px rgba(101, 91, 96, 0.3))
-    drop-shadow(-31px -31px 40px rgba(255, 255, 255, 0.6))
-    drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.6));
 }
 
 p {
@@ -159,14 +142,14 @@ h1 {
 }
 .lds-roller {
   z-index: 1;
-  position: absolute;
-  top: 41%;
-  left: 41%;
-  transform: translate(-50%, -50%) scale(1.4);
+  position: relative;
   display: inline-block;
+  top: 35%;
+  left: 38%;
+  transform: translate(-50%, -50%) scale(3.5);
   width: 80px;
   height: 80px;
-  transform: scale(2.5);
+  transform: scale(3.5);
   filter: drop-shadow(30px 30px 40px rgba(101, 91, 96, 0.3))
     drop-shadow(-31px -31px 40px rgba(255, 255, 255, 0.6))
     drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.6));
@@ -182,7 +165,7 @@ h1 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #fbfeff;
+  background: #ffffff;
   margin: -3.6px 0 0 -3.6px;
 }
 .lds-roller div:nth-child(1) {
