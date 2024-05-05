@@ -16,16 +16,30 @@
 .hero-home {
   position: relative;
   background-color: #101010;
-  width: 100vw;
-  height: 100vh;
+  width: 100svw;
+  height: 100svh;
   display: grid;
   place-items: center;
   overflow: hidden;
-  background-image: url("assets/GradientBackground.png");
-  background-size: cover; /* Ensures the background covers the entire element */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+
+  background-color: rgb(112, 26, 117);
+  background-image: radial-gradient(
+      at 0.28% 65.33%,
+      rgb(17, 24, 39) 0,
+      transparent 97%
+    ),
+    radial-gradient(at 10.01% 100.67%, rgb(17, 24, 39) 0, transparent 67%),
+    radial-gradient(at 103.26% -3%, rgb(244, 114, 182) 0, transparent 65%),
+    radial-gradient(at 61% 5%, rgb(168, 85, 247) 0, transparent 70%),
+    radial-gradient(at 61.34% 74.17%, rgb(134, 25, 143) 0, transparent 71%),
+    radial-gradient(at 13.88% 21.67%, rgb(88, 28, 135) 0, transparent 100%);
+
+  /*   background-image: url("assets/GradientBackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
+
 .BackgroundGridHome {
   position: absolute;
   top: 0;
@@ -51,7 +65,25 @@
   overflow: hidden;
   z-index: 0;
   filter: drop-shadow(30px 30px 100px rgb(25, 5, 71));
-  opacity: 0.3;
+  animation: fadeinLoad 10s ease 1s, fadeUp 5s ease-out 0.5s;
+  opacity: 0.5;
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeinLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
 .HeroImage img {
@@ -89,7 +121,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
 }
 
 .Credits {
@@ -108,7 +139,7 @@ h1 {
   top: 52vh;
 }
 
-.ExperiencerDisksHome {
+/* .ExperiencerDisksHome {
   z-index: 1;
   display: block;
   position: absolute;
@@ -123,22 +154,11 @@ h1 {
   transform-origin: center;
   transition: transform 0.6s ease-in-out;
 }
-
-/* .dot {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
-  z-index: -1;
-} */
-
+ */
 .GlassCircle {
-  display: block;
+  cursor: pointer;
+  transform-origin: center;
+  display: inline-block;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -160,6 +180,8 @@ h1 {
     inset -20px -5px 10px rgba(67, 67, 67, 0.2);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  transform-origin: center;
+  transition: transform 0.6s ease-in-out;
 }
 
 /* Orbit*/
