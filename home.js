@@ -19,19 +19,13 @@ function spaNavigate(data) {
   document.startViewTransition(() => updateTheDOMSomehow(data));
 }
 
-document.addEventListener("visibilitychange", function () {
-  if (document.visibilityState === "visible") {
-    const heroImage = document.querySelector(".HeroImage");
+document.addEventListener("DOMContentLoaded", function () {
+  const dragMeImage = document.getElementById("dragMeImage");
 
-    // Force reflow/repaint
-    heroImage.style.animation = "none";
-    void heroImage.offsetWidth; // This line is crucial, as it forces a reflow
-
-    // Re-apply the animation
-    heroImage.style.animation = "";
-    setTimeout(() => {
-      heroImage.style.animation =
-        "fadeinLoad 10s ease 1s, fadeUp 5s ease-out 0.5s";
-    }, 50); // A small delay to ensure the styles are applied
-  }
+  document.addEventListener("mousemove", function (e) {
+    dragMeImage.style.display = "block"; // Make the image visible
+    // Subtract half the width and height to center the image on the cursor
+    dragMeImage.style.left = e.pageX - 32 + "px"; // Assuming the image is 32px wide
+    dragMeImage.style.top = e.pageY - 32 + "px"; // Assuming the image is 32px high
+  });
 });

@@ -38,6 +38,12 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 400px) {
+  .Grid {
+    transform: scale(2);
+  }
+}
+
 .ExperiencerDisks {
   z-index: 1;
   display: block;
@@ -80,7 +86,7 @@
 
 p {
   font-family: "PP Neue Montreal", sans-serif;
-  color: #1b1c1e;
+  color: #1f2136;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.01rem;
@@ -89,10 +95,24 @@ p {
   z-index: 3;
   text-align: left;
 }
+@media only screen and (max-width: 400px) {
+  p {
+    color: #1f2136;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
 
 h1 {
   top: 43%;
-  color: #1b1c1e;
+  color: #1f2136;
   font-family: Speltale;
   font-size: 48px;
   font-weight: 500;
@@ -103,6 +123,20 @@ h1 {
   text-align: left;
   z-index: 3;
 }
+@media only screen and (max-width: 400px) {
+  h1 {
+    color: #1f2136;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
 
 .Credits {
   top: 40px;
@@ -110,6 +144,12 @@ h1 {
 
 .Info {
   bottom: 40px;
+}
+@media only screen and (max-width: 400px) {
+  .Info {
+    top: 90svh;
+    width: 450px;
+  }
 }
 
 .lds-roller,

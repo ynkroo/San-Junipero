@@ -13,10 +13,6 @@
   box-sizing: border-box;
 }
 
-body {
-  cursor: none; /* Hide the cursor across the entire body */
-}
-
 .hero-home {
   position: relative;
   background-color: #101010;
@@ -82,7 +78,6 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  mix-blend-mode: screen;
 }
 
 .Credits {
@@ -276,15 +271,16 @@ h1 {
 }
 
 .viewport-child-child {
-  width: 100svw;
-  height: 100svh;
+  width: 500px;
+  height: 300px;
   float: left;
   object-fit: cover;
+  gap: 100px;
 }
 
 .HeroImage {
   border-radius: 32px; /* Rounded corners */
-  width: 50vw;
+  width: 80vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -292,12 +288,8 @@ h1 {
   overflow: hidden;
   z-index: 0;
   filter: drop-shadow(30px 30px 100px rgb(25, 5, 71));
-  animation: fadeinLoad 5s ease 1s forwards, scaleUp 5s ease 1s forwards;
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-
-  position: relative;
+  animation: fadeinLoad 10s ease 1s forwards; /* Added 'forwards' to maintain final state */
+  opacity: 0; /* Start with opacity 0 */
 }
 
 @keyframes fadeinLoad {
@@ -305,35 +297,8 @@ h1 {
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 0.5;
   }
-}
-@keyframes scaleUp {
-  from {
-    transform: scale(0.6); /* Start with a scale of 0.6 */
-  }
-  to {
-    transform: scale(1); /* End with a scale of 1 */
-  }
-}
-
-.HeroImage1 {
-  top: -500px;
-  left: -1000px;
-}
-
-.HeroImage2 {
-  top: -400px;
-  left: -100px;
-}
-
-.HeroImage3 {
-  top: -2300px;
-  left: 600px;
-}
-.HeroImage4 {
-  top: -2800px;
-  left: -1300px;
 }
 
 .HeroImage img {
@@ -341,23 +306,4 @@ h1 {
   max-height: 100%;
   object-fit: contain;
   border-radius: inherit;
-}
-
-/* Cursor */
-
-#dragMeImage {
-  display: none; /* Initially hidden */
-  position: fixed; /* Positioned relative to the viewport */
-  pointer-events: none; /* Allows clicks to pass through */
-  z-index: 1000; /* Ensure it is on top of other content */
-}
-
-.basic-protect * {
-  /* Selection */
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
