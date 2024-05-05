@@ -47,7 +47,7 @@
 .ExperiencerDisks {
   z-index: 1;
   display: block;
-  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+  background-image: -webkit-linear-gradient(top, #d8d7d7, #fff);
   border-radius: 50%;
   box-shadow: 0px 8px 10px 0px #1f213652, inset 0px 4px 1px 1px white,
     inset 0px -3px 10px 1px rgba(204, 198, 197, 0.5);
