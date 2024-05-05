@@ -11,12 +11,12 @@
   <body>
     <div class="HeroText">
       <p class="Credits">A Black Mirror Story</p>
-      <h1>San Junipero</h1>
+      <h1 class="HeroTilt">San Junipero </h1>
       <p class="Info">Directed by Owen Harris</p>
       <p class="Episode">S3E4</p>
     </div>
     </div>
-    <div class="hero-home">
+    <div class="hero-home" >
       <div class="viewport">
         <div class="viewport-child">
 
@@ -37,7 +37,8 @@
           </div>
       <div class="BackgroundGridHome">
         <svg
-          class="GridHome"
+          class="GridHome" data-tilt
+          data-tilt-full-page-listening
           xmlns="http://www.w3.org/2000/svg"
           width="664"
           height="664"
@@ -67,7 +68,7 @@
         </svg>
       </div>
 
-      <div class="GlassCircle"></div>
+      <!-- <div class="GlassCircle"></div> -->
       
 
       <div class="wrap go">
@@ -81,6 +82,7 @@
     </div>
     <img id="dragMeImage" src="assets/DragMe.png" alt="Drag Me" style="display: none; position: fixed; pointer-events: none; z-index: 1000;" />
     <script src="home.js"></script>
+    <script src=" vanilla-tilt.js"></script>
     <script src="viewport.js"></script>
   </body>
 </html>
