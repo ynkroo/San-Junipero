@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var angle = 0; // Initial angle
   var element = document.querySelector(".GlassCircle"); // Select the element
 
-  element.addEventListener("click", function () {
-    angle += 120; // Increase angle by 90 degrees on each click
+  // Function to update rotation
+  function updateRotation() {
+    angle = (angle + 120) % 360; // Increase angle by 120 degrees and loop back after 360
     element.style.transform = "translate(-50%, -50%) rotate(" + angle + "deg)";
-  });
+  }
+
+  setInterval(updateRotation, 2000); // Continuously rotate every 2 seconds
 });
 
 function spaNavigate(data) {

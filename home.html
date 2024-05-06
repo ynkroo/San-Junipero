@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to San Junipero</title>
     <link rel="stylesheet" href="home-styles.css" />
-    <link rel="stylesheet" href="main.css" />
     <meta name="view-transition" content="same-origin" />
   </head>
   <body>
     <div class="HeroText">
       <p class="Credits">A Black Mirror Story</p>
-      <h1 class="HeroTilt">San Junipero </h1>
+      <h1 class="HeroTilt show-on-desktop hide-on-mobile">San Junipero</h1>
+      <div class="show-on-mobile hide-on-desktop">
+        <h1>San<br>Juni<br>pero</h1>
       <p class="Info">Directed by Owen Harris</p>
       <p class="Episode">S3E4</p>
     </div>
@@ -37,7 +38,7 @@
           </div>
       <div class="BackgroundGridHome">
         <svg
-          class="GridHome" data-tilt
+          class="GridHome" data-tilt data-tilt-glare
           data-tilt-full-page-listening
           xmlns="http://www.w3.org/2000/svg"
           width="664"
@@ -71,14 +72,14 @@
       <!-- <div class="GlassCircle"></div> -->
       
 
-      <div class="wrap go">
+      <!-- <div class="wrap go">
         <div class="loader orbit">
           <div></div>
           <div></div>
           <div></div>
           <div></div>
         </div>
-      </div>
+      </div> -->
     </div>
     <img id="dragMeImage" src="assets/DragMe.png" alt="Drag Me" style="display: none; position: fixed; pointer-events: none; z-index: 1000;" />
     <script src="home.js"></script>
