@@ -121,7 +121,7 @@ h1 {
     font-weight: 500;
     line-height: 75px;
     text-transform: uppercase;
-    top: 33vh;
+    top: 31vh;
     left: 20vw;
     transform: translate(-50%, -50%);
   }
@@ -181,7 +181,7 @@ h1 {
     text-align: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 65%;
+    top: 70%;
     margin-left: 0px;
   }
 }
