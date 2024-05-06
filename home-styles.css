@@ -59,6 +59,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 1;
+  animation: fadeinLoad 4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .GridHome {
@@ -82,10 +83,12 @@ p {
   position: absolute;
   text-align: center;
   z-index: 1;
+  opacity: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  animation: fadeinLoad 6s cubic-bezier(0.65, 0, 0.35, 1) 2s forwards;
 }
 
 h1 {
@@ -98,11 +101,16 @@ h1 {
   position: absolute;
   text-align: center;
   z-index: 1;
-  top: 50%;
-  left: 50%;
+  top: 42vh;
+  left: 27vw;
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
+  transform-origin: center;
+  animation: fadeinLoad 4s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    scaleUp 4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  opacity: 0;
 }
+
 @media only screen and (max-width: 400px) {
   h1 {
     color: #f05aa1;
@@ -363,7 +371,7 @@ h1 {
 }
 
 .HeroImage {
-  border-radius: 32px; /* Rounded corners */
+  border-radius: 32px;
   width: 50vw;
   height: 100vh;
   display: flex;
@@ -371,7 +379,7 @@ h1 {
   align-items: center;
   overflow: hidden;
   z-index: 0;
-  filter: drop-shadow(30px 30px 100px rgb(25, 5, 71));
+  filter: drop-shadow(40px 40px 70px rgba(27, 4, 66, 0.6));
   animation: fadeinLoad 4s cubic-bezier(0.65, 0, 0.35, 1) 1s forwards,
     scaleUp 4s cubic-bezier(0.65, 0, 0.35, 1) 1s forwards;
   opacity: 0;
