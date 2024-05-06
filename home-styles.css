@@ -127,6 +127,19 @@ h1 {
   top: 95vh;
   width: 100%;
 }
+@media only screen and (max-width: 400px) {
+  .Info {
+    color: #f05aa1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    margin-left: 0px;
+  }
+}
 
 .Episode {
   position: absolute;
@@ -143,7 +156,7 @@ h1 {
     text-align: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 70%;
+    top: 73%;
     margin-left: 0px;
   }
 }
@@ -350,13 +363,13 @@ h1 {
   opacity: 0;
   z-index: 2;
   pointer-events: none;
-
   position: relative;
 }
 
 @media screen and (max-width: 400px) {
   .HeroImage {
     overflow: hidden;
+    border-radius: 12px;
   }
 }
 
@@ -385,7 +398,7 @@ h1 {
 @media screen and (max-width: 400px) {
   .HeroImage1 {
     height: auto;
-    width: 290px;
+    width: 350px;
     top: -190px;
     left: -250px;
   }
@@ -398,7 +411,7 @@ h1 {
 @media screen and (max-width: 400px) {
   .HeroImage2 {
     height: auto;
-    width: 290px;
+    width: 350px;
     top: -190px;
     left: 150px;
   }
@@ -411,7 +424,7 @@ h1 {
 @media screen and (max-width: 400px) {
   .HeroImage3 {
     height: auto;
-    width: 290px;
+    width: 350px;
     top: -80px;
     left: -260px;
   }
@@ -423,7 +436,7 @@ h1 {
 @media screen and (max-width: 400px) {
   .HeroImage4 {
     height: auto;
-    width: 290px;
+    width: 350px;
     top: -90px;
     left: 290px;
   }
@@ -435,7 +448,7 @@ h1 {
 @media screen and (max-width: 400px) {
   .HeroImage5 {
     height: auto;
-    width: 290px;
+    width: 350px;
     top: 10px;
     left: 200px;
   }
@@ -447,6 +460,15 @@ video {
   max-height: 100%;
   object-fit: contain;
   border-radius: inherit;
+}
+
+@media screen and (max-width: 400px) {
+  .HeroImage img,
+  video {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
 }
 
 /* Cursor */
