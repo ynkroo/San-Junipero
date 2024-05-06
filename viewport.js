@@ -88,9 +88,22 @@ class ViewPortEventHandler {
     this.viewPort = viewPort;
     this.isDragging = false;
     this.startCoords = new Vector2d(0, 0);
+
+    // Mouse events
     this.viewPort.elm.addEventListener("mousedown", this.startDrag.bind(this));
     this.viewPort.elm.addEventListener("mouseup", this.endDrag.bind(this));
     this.viewPort.elm.addEventListener("mousemove", this.onDrag.bind(this));
+
+    // Touch events
+    this.viewPort.elm.addEventListener(
+      "touchstart",
+      this.startTouchDrag.bind(this)
+    );
+    this.viewPort.elm.addEventListener("touchend", this.endDrag.bind(this));
+    this.viewPort.elm.addEventListener(
+      "touchmove",
+      this.onTouchDrag.bind(this)
+    );
   }
 
   startDrag(e) {
@@ -100,8 +113,13 @@ class ViewPortEventHandler {
     this.isDragging = true;
   }
 
-  endDrag() {
-    this.isDragging = false;
+  startTouchDrag(e) {
+    const touch = e.touches[0];
+    this.startCoords = new Vector2d(touch.clientX, touch.clientY).add(
+      this.viewPort.position
+    );
+    this.isDragging = true;
+    e.preventDefault(); // Often necessary to prevent the page from scrolling
   }
 
   onDrag(e) {
@@ -111,6 +129,21 @@ class ViewPortEventHandler {
         this.startCoords.y - e.layerY
       );
     }
+  }
+
+  onTouchDrag(e) {
+    if (this.isDragging && e.touches.length > 0) {
+      const touch = e.touches[0];
+      this.viewPort.scrollTo(
+        this.startCoords.x - touch.clientX,
+        this.startCoords.y - touch.clientY
+      );
+    }
+    e.preventDefault(); // This helps avoid simultaneous page scrolling
+  }
+
+  endDrag() {
+    this.isDragging = false;
   }
 }
 
