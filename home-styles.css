@@ -479,6 +479,11 @@ h1 {
   }
 }
 
+.HeroImage6 {
+  top: -3650px;
+  left: -1250px;
+}
+
 .HeroImage img,
 video {
   max-width: 100%;
