@@ -24,7 +24,11 @@ body {
 
 .hero-loading {
   position: relative;
-  background-color: #d8d7d7;
+  background: radial-gradient(
+    178.47% 81.05% at 50.46% 50.91%,
+    #f3f3f3 0%,
+    #a6a6a6 100%
+  );
   width: 100svw;
   height: 100svh;
   display: grid;
@@ -40,7 +44,7 @@ body {
   bottom: 0;
   z-index: 1;
   opacity: 0;
-  animation: fadeinLoad 3s cubic-bezier(0.65, 0, 0.35, 1) 2s forwards;
+  animation: fadeinLoad 3.5s cubic-bezier(0.65, 0, 0.35, 1) 2.5s forwards;
 }
 
 .Grid {
@@ -70,10 +74,6 @@ body {
   opacity: 0;
   animation: fadeinLoad 3s cubic-bezier(0.65, 0, 0.35, 1) 2s forwards,
     scaleUp 3s cubic-bezier(0.65, 0, 0.35, 1) 1s forwards;
-}
-
-.ExperiencerDisks:hover {
-  transform: scale(1.05);
 }
 
 p {
