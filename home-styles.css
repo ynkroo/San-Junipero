@@ -483,6 +483,10 @@ h1 {
   top: -3650px;
   left: -1250px;
 }
+.HeroImage7 {
+  top: -7000px;
+  left: 0px;
+}
 
 .HeroImage img,
 video {
@@ -499,11 +503,6 @@ video {
     height: 200px;
     object-fit: cover;
   }
-}
-.Music,
-audio {
-  top: -4500px;
-  left: 450px;
 }
 
 /* Cursor */
@@ -558,19 +557,9 @@ audio {
   }
 }
 
-audio::-webkit-media-controls-panel {
-  background-color: #f275c1;
-}
-
-audio::-webkit-media-controls-play-button {
-  background-color: #ecb4d6;
-  border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button:hover {
-  background-color: #22193b;
-}
-
+audio::-webkit-media-controls-play-button:hover,
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel,
 audio::-webkit-media-controls-volume-button,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-time-remaining-display,
